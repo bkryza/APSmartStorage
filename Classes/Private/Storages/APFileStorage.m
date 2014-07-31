@@ -76,7 +76,6 @@
     [NSFileManager createDirectoryAtPath:self.storageDirectory];
 }
 
-#pragma mark - private
 
 - (NSString *)filePathForURL:(NSURL *)url
 {
@@ -84,4 +83,5 @@
     return  [self.storageDirectory stringByAppendingPathComponent:md5];
 }
 
+#pragma mark - private
 @end

@@ -141,6 +141,13 @@ fileStorage = _fileStorage, memoryStorage = _memoryStorage;
     [self.taskManager cancelAllTasks];
 }
 
+
+- (NSString*)filePathForURL:(NSURL *)downloadURL {
+
+  return [self.fileStorage filePathForURL:downloadURL];
+
+}
+
 #pragma mark - public properties
 
 - (void)setMaxObjectCount:(NSUInteger)maxObjectCount

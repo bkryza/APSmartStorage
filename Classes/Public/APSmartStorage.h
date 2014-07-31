@@ -35,6 +35,8 @@ typedef id (^APParsingBlock)(NSData *data, NSURL *url);
 - (void)removeAllFromMemory;
 - (void)removeAllFromStorage;
 
+
+- (NSString*)filePathForURL:(NSURL *)downloadURL;
 @end
 
 @interface APSmartStorage (Deprecated)
