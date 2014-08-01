@@ -15,5 +15,5 @@
 - (BOOL)moveDataWithURL:(NSURL *)url downloadedToPath:(NSString *)path error:(NSError **)error;
 - (void)removeFileForURL:(NSURL *)url;
 - (void)removeAllFiles;
-
+- (NSString *)filePathForURL:(NSURL *)url;
 @end

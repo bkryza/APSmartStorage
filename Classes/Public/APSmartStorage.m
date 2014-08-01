@@ -193,6 +193,10 @@ fileStorage = _fileStorage, memoryStorage = _memoryStorage;
     return _networkStorage;
 }
 
+- (NSString *)filePathForURL:(NSURL *)url {
+    return [self.fileStorage filePathForURL:url];
+}
+
 #pragma mark - private methods
 
 - (void)storageObjectForTask:(APStorageTask *)task progress:(void (^)(NSUInteger percents))progress
@@ -259,6 +263,8 @@ fileStorage = _fileStorage, memoryStorage = _memoryStorage;
         }
     }];
 }
+
+
 
 #if TARGET_OS_IPHONE
 - (void)didReceiveMemoryWarning:(NSNotification *)notification

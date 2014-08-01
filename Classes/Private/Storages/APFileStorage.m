@@ -76,12 +76,14 @@
     [NSFileManager createDirectoryAtPath:self.storageDirectory];
 }
 
-#pragma mark - private
 
 - (NSString *)filePathForURL:(NSURL *)url
 {
     NSString *md5 = url.absoluteString.MD5Digest;
     return  [self.storageDirectory stringByAppendingPathComponent:md5];
 }
+
+#pragma mark - private
+
 
 @end
